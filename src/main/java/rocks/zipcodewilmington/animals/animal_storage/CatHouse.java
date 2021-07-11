@@ -9,20 +9,22 @@ import rocks.zipcodewilmington.animals.Cat;
 public class CatHouse {
     private static AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
 
-    public static void add(Cat cat) {
+    public static int add(Cat cat) {
         catHouse.add(cat);
+        return 0;
     }
 
     public static void remove(Integer id) {
         catHouse.removeAnimalById(id);
     }
 
-    public static void remove(Cat cat) {
+    public static int remove(Cat cat) {
         catHouse.removeAnimal(cat);
+        return 0;
     }
 
     public static Cat getCatById(Integer id) {
-        return catHouse.getAnimalById(id);
+        return (Cat) catHouse.getAnimalById(id);
     }
 
     public static Integer getNumberOfCats() {

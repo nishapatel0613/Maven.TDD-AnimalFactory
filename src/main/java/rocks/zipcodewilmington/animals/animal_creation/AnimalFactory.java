@@ -1,6 +1,5 @@
 package rocks.zipcodewilmington.animals.animal_creation;
 
-import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
@@ -15,11 +14,19 @@ import java.util.Date;
 public class AnimalFactory {
     public static Dog createDog(String name, Date birthDate) {
         Integer newId = DogHouse.getNumberOfDogs();
-        return new Dog(name, birthDate, newId);
+        return new Dog(name);
     }
 
     public static Cat createCat(String name, Date birthDate) {
         Integer newId = CatHouse.getNumberOfCats();
-        return new Cat(name, birthDate, newId);
+        return new Cat(name);
+    }
+
+    public static int add(Dog dog) {
+        return 0;
+    }
+
+    public static int add(Cat cat) {
+        return 0;
     }
 }
